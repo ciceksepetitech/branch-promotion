@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: techciceksepeti/onbuild:latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set environment variables
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+        run: |
+          echo "$SECRETS_CONTEXT" | jq -r 'to_entries[] | "\(.key)=\(.value)"' >> $GITHUB_ENV
+
+      - name: Build service
+        run: |
+          set -x
+          bash ./prepare-build.sh
+          bash ./.build/src/ci-build.sh
+
+      - name: Push image to gcr
+        run: |
+          set -x
+          bash ./.build/src/ci-push.sh 

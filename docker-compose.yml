@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    image: ciceksepeti/BranchPromotion
+    container_name: BranchPromotion
+    ports:
+      - "5000:5000"
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=staging      
