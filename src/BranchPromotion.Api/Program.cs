@@ -1,9 +1,9 @@
+using BranchPromotion.Application;
+using BranchPromotion.Infrastructure;
 using Cosmos.AspNetCore;
 using Cosmos.AspNetCore.Exceptions;
 using Cosmos.Configuration;
 using Cosmos.Logging.Serilog;
-using BranchPromotion.Application;
-using BranchPromotion.Infrastructure;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Swashbuckle.AspNetCore.SwaggerUI;

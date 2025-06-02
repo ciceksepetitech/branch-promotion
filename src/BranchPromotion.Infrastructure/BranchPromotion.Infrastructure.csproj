@@ -13,9 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Cosmos.Data.EntityFramework" />
-    <PackageReference Include="Dapper" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" />
-    <PackageReference Include="Refit.HttpClientFactory" />
   </ItemGroup>
 
 </Project>

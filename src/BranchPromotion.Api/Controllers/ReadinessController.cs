@@ -1,3 +1,4 @@
+using BranchPromotion.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BranchPromotion.Api.Controllers;
@@ -5,11 +6,14 @@ namespace BranchPromotion.Api.Controllers;
 [Route("readiness")]
 public class ReadinessController : ControllerBase
 {
+    private readonly ApplicationDbContext _dbContext;
+    
     /// <summary>
     /// Ctor
     /// </summary>
-    public ReadinessController()
+    public ReadinessController(ApplicationDbContext dbContext)
     {
+        _dbContext = dbContext;
     }
 
     /// <summary>
@@ -20,6 +24,8 @@ public class ReadinessController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
+        _ = _dbContext.BranchPromotionVariant.FirstOrDefault();
+        
         return Ok(new
         {
             ServerTime = DateTime.Now

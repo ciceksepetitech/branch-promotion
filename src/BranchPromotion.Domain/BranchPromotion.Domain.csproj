@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="Cosmos" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" />
-    <PackageReference Include="Refit" />
   </ItemGroup>
 
 </Project>

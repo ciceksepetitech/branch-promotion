@@ -1,4 +1,5 @@
-using Cosmos.Caching.Redis.Resilience;
+using BranchPromotion.Application.Services;
+using BranchPromotion.Domain.Services;
 using Cosmos.MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,6 @@ public static class Startup
     {
         services.AddCosmosMediatR(typeof(Startup));
 
-        services.AddCosmosRedisResilienceCache(configuration);
+        services.AddTransient<IValueConverter, ValueConverter>();
     }
 }

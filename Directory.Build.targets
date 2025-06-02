@@ -11,17 +11,11 @@
     <PackageReference Update="Cosmos.Logging.Serilog" Version="8.1.24" />
     <PackageReference Update="Cosmos.MediatR" Version="8.1.24" />
     <PackageReference Update="Cosmos.Data.EntityFramework" Version="8.1.24" />
-    <PackageReference Update="Cosmos.Caching.Redis.Resilience" Version="8.1.24" />
 
     <!-- Nuget -->
-    <PackageReference Update="Dapper" Version="2.1.66" />
     <PackageReference Update="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
-    <PackageReference Update="Mapster" Version="7.4.0" />
-    <PackageReference Update="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="4.8.0" />
     <PackageReference Update="Swashbuckle.AspNetCore" Version="7.3.1" />
-    <PackageReference Update="Refit" Version="8.0.0" />
-    <PackageReference Update="Refit.HttpClientFactory" Version="8.0.0" />
-
+    
     <!-- Test -->
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Update="Moq" Version="4.20.69" />
